@@ -6,7 +6,7 @@ https://powerful-everglades-60027.herokuapp.com
 
 <!-- Github -->
 
-https://github.com/tonesfrantz/flask-app.git
+https://github.com/tonesfrantz/pet_peer.git
 
 # Tech_used:
 
