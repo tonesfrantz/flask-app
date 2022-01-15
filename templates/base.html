@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/static/style.css" />
+        <title>Pet Peer</title>
+    </head>
+    <body>
+        <header>Pet Peer</header>
+        <nav>
+            <div>
+                <a href="/">Home</a>
+            </div>
+            <div>
+                <a href="/photo/create">Add - photo</a>
+            </div>
+            <div>
+                <a href="/photo/most_viewed">Most Viewed Photo's</a>
+            </div>
+            <div>
+                <a href="/photo/most_viewed">Most Viewed Photo's</a>
+            </div>
+            <!-- {% if session['user_id %}
+            <div>
+                <a>Logged in as: {{session['user_name']}}:</a>
+            </div>
+            <div>
+                <a href="/logout">Logout</a>
+            </div>
+            {% endif %} -->
+        </nav>
+        <main>{% block content %}{% endblock content %}</main>
+        <footer>
+            <section>
+                <h4>Pet Peer</h4>
+                <p>&copy; 2022 Tony Frantz</p>
+            </section>
+            <section>
+                <h4>Contact us</h4>
+                1300 dog cat<br />
+                my_dog_is@cute.com
+            </section>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% block content %}
+<section class="all-pets">
+    {% for pet in pet_photos %}
+    <div class="individual_pet">
+        <img scr="{{pet['photo_url']}}" alt="{{pet['caption']}}" />
+        <div class="caption">{{pet['caption']}}</div>
+        <form action="/like_add" method="POST" id="like_add">
+            <button name="like_add" type="submit" value="{{pet['user_id']}}">
+                LIKE
+            </button>
+        </form>
+        <!-- There is a need to put the phot_id here but first it 
+            must be retrieved from the photo table in the DB. -->
+    </div>
+    {% endfor %}
+</section>
+
+{% endblock content%}
