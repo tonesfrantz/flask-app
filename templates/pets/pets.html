@@ -2,7 +2,7 @@
 <section class="all-pets">
     {% for pet in pet_photos %}
     <div class="individual_pet">
-        <img scr="{{pet['photo_url']}}" alt="{{pet['caption']}}" />
+        <img src="{{pet['photo_url']}}" alt="{{pet['caption']}}" />
         <div class="caption">{{pet['caption']}}</div>
         <form action="/like_add" method="POST" id="like_add">
             <button name="like_add" type="submit" value="{{pet['user_id']}}">

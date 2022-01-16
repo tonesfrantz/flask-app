@@ -1,0 +1,12 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="signup_login">
+    <form action="/sessions/destroy" method="POST">
+        <h2>Are you sure you want to Logout...?</h2>
+        <div>
+            <button type="submit" name="logout">Log-Out</button>
+        </div>
+    </form>
+</div>
+
+{% endblock content %}

@@ -23,39 +23,39 @@ create table photo_likes (
 INSERT INTO
     users (name, email, password)
 VALUES
-    ('user1', 'user1', 'user1');
+    ('user1', 'user1@gmail.com', 'user1');
 
 INSERT INTO
     users (name, email, password)
 VALUES
-    ('user2', 'user2', 'user2');
+    ('user2', 'user2@gmail.com', 'user2');
 
 INSERT INTO
     users (name, email, password)
 VALUES
-    ('user3', 'user3', 'user3');
+    ('user3', 'user3@gmail.com', 'user3');
 
 INSERT INTO
     users (name, email, password)
 VALUES
-    ('user4', 'user4', 'user4');
+    ('user4', 'user4@gmail.com', 'user4');
 
 INSERT INTO
     users (name, email, password)
 VALUES
-    ('user5', 'user5', 'user5');
+    ('user5', 'user5@gmail.com', 'user5');
 
 INSERT INTO
     users (name, email, password)
 VALUES
-    ('user6', 'user6', 'user6');
+    ('user6', 'user6@gmail.com', 'user6');
 
 INSERT INTO
     photos (user_id, photo_url, caption)
 VALUES
     (
         1,
-        '/Users/anthonyfrantz/sei/project2/flask-app/testing photos/arlo1.jpeg',
+        'static/images/arlo1.jpeg',
         'arlo1'
     );
 
@@ -64,7 +64,7 @@ INSERT INTO
 VALUES
     (
         1,
-        '/Users/anthonyfrantz/sei/project2/flask-app/testing photos/arlo2.jpeg',
+        'static/images/arlo2.jpeg',
         'arlo2'
     );
 
@@ -73,7 +73,7 @@ INSERT INTO
 VALUES
     (
         2,
-        '/Users/anthonyfrantz/sei/project2/flask-app/testing photos/arlo3.JPG',
+        'static/images/arlo3.JPG',
         'arlo3'
     );
 
@@ -82,7 +82,7 @@ INSERT INTO
 VALUES
     (
         2,
-        '/Users/anthonyfrantz/sei/project2/flask-app/testing photos/arlo4.jpeg',
+        'static/images/arlo4.jpeg',
         'arlo4'
     );
 
@@ -91,7 +91,7 @@ INSERT INTO
 VALUES
     (
         3,
-        '/Users/anthonyfrantz/sei/project2/flask-app/testing photos/arlo5.JPG',
+        '/static/images/arlo5.JPG',
         'arlo5'
     );
 
@@ -100,7 +100,7 @@ INSERT INTO
 VALUES
     (
         3,
-        '/Users/anthonyfrantz/sei/project2/flask-app/testing photos/arlo6.JPG',
+        '/static/images/arlo6.JPG',
         'arlo6'
     );
 
@@ -109,7 +109,7 @@ INSERT INTO
 VALUES
     (
         4,
-        '/Users/anthonyfrantz/sei/project2/flask-app/testing photos/arlo7.jpeg',
+        '/static/images/arlo7.jpeg',
         'arlo7'
     );
 
@@ -118,7 +118,7 @@ INSERT INTO
 VALUES
     (
         4,
-        '/Users/anthonyfrantz/sei/project2/flask-app/testing photos/arlo8.JPG',
+        '/static/images/arlo8.JPG',
         'arlo8'
     );
 
@@ -127,7 +127,7 @@ INSERT INTO
 VALUES
     (
         5,
-        '/Users/anthonyfrantz/sei/project2/flask-app/testing photos/arlo9.JPG',
+        '/static/images/arlo9.JPG',
         'arlo9'
     );
 
@@ -136,7 +136,7 @@ INSERT INTO
 VALUES
     (
         5,
-        '/Users/anthonyfrantz/sei/project2/flask-app/testing photos/arlo10.JPG',
+        '/static/images/arlo10.JPG',
         'arlo10'
     );
 
@@ -145,7 +145,7 @@ INSERT INTO
 VALUES
     (
         6,
-        '/Users/anthonyfrantz/sei/project2/flask-app/testing photos/arlo11.JPG',
+        '/static/images/arlo11.JPG',
         'arlo11'
     );
 
@@ -154,6 +154,6 @@ INSERT INTO
 VALUES
     (
         6,
-        '/Users/anthonyfrantz/sei/project2/flask-app/testing photos/arlo12.jpeg',
+        '/static/images/arlo12.jpeg',
         'arlo12'
     );

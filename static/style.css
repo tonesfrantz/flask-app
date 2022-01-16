@@ -13,3 +13,88 @@ footer {
     width: 60em;
     margin: 2em auto;
 }
+
+a,
+button {
+    border: 0;
+    margin-block: 0.5em;
+    display: block;
+}
+
+button {
+    padding: 0.25em 0.5em;
+    cursor: pointer;
+    background-color: rgb(186, 233, 158);
+    font-size: 1.2em;
+}
+
+input,
+textarea {
+    padding: 0.5em 1em;
+}
+
+form {
+    margin: 0 auto;
+    width: 30em;
+}
+
+form > div {
+    margin-block: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+form label,
+form input,
+form textarea {
+    width: 100%;
+}
+
+form label {
+    font-weight: bold;
+}
+
+.individial_pet {
+    background-color: rgb(244, 244, 244);
+    padding: 2em;
+}
+
+.individial_pet {
+    width: 100%;
+    height: 20px;
+    object-fit: cover;
+    border: 0.5em solid white;
+}
+img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border: 0.5em solid white;
+}
+
+.individial_pet .info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.all-pets {
+    display: grid;
+    gap: 2em;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.header_nav {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+#name #email #password {
+    position: relative;
+    left: 2em;
+}

@@ -8,8 +8,12 @@
         <title>Pet Peer</title>
     </head>
     <body>
-        <header>Pet Peer</header>
-        <nav>
+        <header class="header_nav">
+            <h1>Pet Peer</h1>
+            <h2>Where your pet is at the centre</h2>
+        </header>
+        <nav class="header_nav">
+            {% if session['user_id'] %}
             <div>
                 <a href="/">Home</a>
             </div>
@@ -19,17 +23,14 @@
             <div>
                 <a href="/photo/most_viewed">Most Viewed Photo's</a>
             </div>
-            <div>
-                <a href="/photo/most_viewed">Most Viewed Photo's</a>
-            </div>
-            <!-- {% if session['user_id %}
+
             <div>
                 <a>Logged in as: {{session['user_name']}}:</a>
             </div>
             <div>
                 <a href="/logout">Logout</a>
             </div>
-            {% endif %} -->
+            {% endif %}
         </nav>
         <main>{% block content %}{% endblock content %}</main>
         <footer>
