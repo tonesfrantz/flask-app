@@ -4,8 +4,11 @@
     <div class="individual_pet">
         <img src="{{pet['photo_url']}}" alt="{{pet['caption']}}" />
         <div class="caption">{{pet['caption']}}</div>
-        <form action="/like_add" method="POST" id="like_add">
-            <button name="like_add" type="submit" value="{{pet['user_id']}}">
+        <div class="photo_id">
+            photo_id: {{pet['photo_id']}}, user_id: {{pet['user_id']}}
+        </div>
+        <form action="/like" method="POST" id="like">
+            <button name="like" type="submit" value="{{pet['user_id']}}">
                 LIKE
             </button>
         </form>
