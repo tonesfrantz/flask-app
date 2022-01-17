@@ -19,9 +19,12 @@ def create_user():
     password2 = request.form.get("password2")
     if password != password2:
         return redirect("/signup?error=Invalid+password+confirmation")
-    insert_user(name, email, password)
-
+    user = insert_user(name, email, password)
+    session['user_id'] = user['user_id']
+    session['user_name'] = user['name']
     return redirect("/all_pets")
+
+    # INSERT INTO users(columns, ...) VALUES( % s,) RETURNING *
 
 
 @user_controller.route("/user_list")

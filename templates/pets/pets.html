@@ -4,16 +4,20 @@
     <div class="individual_pet">
         <img src="{{pet['photo_url']}}" alt="{{pet['caption']}}" />
         <div class="caption">{{pet['caption']}}</div>
-        <div class="photo_id">
-            photo_id: {{pet['photo_id']}}, user_id: {{pet['user_id']}}
-        </div>
+        <div class="photo_id"></div>
+        {% if pet['has_liked'] == 0 %}
         <form action="/like" method="POST" id="like">
-            <button name="like" type="submit" value="{{pet['user_id']}}">
-                LIKE
-            </button>
+            <input type="hidden" name="photo_id" value="{{pet['photo_id']}}" />
+            <button type="submit" value="{{pet['user_id']}}">LIKE</button>
+            <div class="likes">{{pet['like_count']}}</div>
         </form>
-        <!-- There is a need to put the phot_id here but first it 
-            must be retrieved from the photo table in the DB. -->
+        {% else %}
+        <form action="/un_like" method="POST" id="like">
+            <input type="hidden" name="photo_id" value="{{pet['photo_id']}}" />
+            <button type="submit" value="{{pet['user_id']}}">UNLIKE</button>
+            <div class="likes">{{pet['like_count']}}</div>
+        </form>
+        {% endif %}
     </div>
     {% endfor %}
 </section>

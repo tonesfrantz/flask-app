@@ -5,6 +5,7 @@ import psycopg2
 from controllers.photo_controller import photo_controller
 from controllers.user_controller import user_controller
 from controllers.session_controller import session_controller
+from controllers.likes_controller import likes_controller
 
 DB_URL = os.environ.get("DATABASE_URL", "dbname=flask_app")
 SECRET_KEY = os.environ.get("SECRET_KEY", "password")
@@ -21,6 +22,7 @@ def home():
 app.register_blueprint(photo_controller)
 app.register_blueprint(user_controller)
 app.register_blueprint(session_controller)
+app.register_blueprint(likes_controller)
 
 
 # @app.route('/like_add')

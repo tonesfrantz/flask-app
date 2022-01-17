@@ -7,5 +7,13 @@ likes_controller = Blueprint(
 
 @likes_controller.route('/like', methods=['POST'])
 def create():
-    user_id = request.get('pet['user_id']')
-    photo_id =
+    user_id = session.get('user_id')
+    photo_id = request.form.get('photo_id')
+
+    insert_likes(photo_id, user_id)
+
+    return redirect('/')
+
+# @likes_controller.route('/count_likes')
+# def read():
+#     photo_id =

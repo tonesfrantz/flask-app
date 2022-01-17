@@ -22,3 +22,14 @@ def sql_write(query, params):
     conn.commit()
     cur.close()
     conn.close()
+
+
+def sql_read_write(query, params):
+    conn = psycopg2.connect(DB_URL)
+    cur = conn.cursor(cursor_factory=DictCursor)
+    cur.execute(query, params)
+    results = cur.fetchall()
+    conn.commit()
+    cur.close()
+    conn.close()
+    return results

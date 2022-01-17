@@ -27,8 +27,10 @@ def get_photo(photo_id):
 # READ_ALL
 
 
-def get_all_photos():
-    results = database.sql_select("SELECT * FROM photos;", [])
+def get_all_photos(user_id):
+    results = database.sql_select("SELECT photos.*, count(all_likes.user_id) as like_count, count(user_likes.user_id) as has_liked FROM photos " +
+                                  "left join photo_likes all_likes on all_likes.photo_id=photos.photo_id " +
+                                  "left join photo_likes user_likes on user_likes.photo_id=photos.photo_id and user_likes.user_id= %s GROUP BY photos.photo_id;", [user_id])
     return results
 
 # UPDATE

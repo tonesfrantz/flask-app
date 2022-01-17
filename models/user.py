@@ -4,11 +4,11 @@ import bcrypt
 
 def insert_user(name, email, password):
     password = bcrypt.hashpw(password.encode(), bcrypt.gensalt()).decode()
-
-    database.sql_write(
-        "INSERT INTO users(name, email, password) VALUES(%s, %s, %s);", [
+    results = database.sql_read_write(
+        "INSERT INTO users(name, email, password) VALUES(%s, %s, %s) RETURNING *;", [
             name, email, password]
     )
+    return results[0]
 
 
 def get_user_by_email(email):
