@@ -1,6 +1,6 @@
 from flask import Blueprint, request, session, redirect, render_template
 from models.likes import insert_likes, delete_like
-# from models.photo import get_all_Desc_most_popular
+from models.photo import get_all_Desc_most_popular
 
 likes_controller = Blueprint(
     "likes_controller", __name__, template_folder="../templates/pets")
@@ -31,8 +31,8 @@ def destroy():
 # read-most popular
 
 
-# @likes_controller.route('/most_popular')
-# def photos():
-#     user_id = session.get("user_id")
-#     pet_photos = get_all_Desc_most_popular(user_id)
-#     return render_template("pets.html", pet_photos=pet_photos)
+@likes_controller.route('/most_popular')
+def photos():
+    user_id = session.get("user_id")
+    pet_photos = get_all_Desc_most_popular(user_id)
+    return render_template("pets.html", pet_photos=pet_photos)
