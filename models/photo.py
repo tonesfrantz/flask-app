@@ -4,7 +4,7 @@ import database
 
 
 def insert_photo(user_id, photo_url, caption):
-    database.sql_write("INSERT INTO photos (user_id, photo_url, caption VALUES(%s, %s, %s);", [
+    database.sql_write("INSERT INTO photos (user_id, photo_url, caption) VALUES(%s, %s, %s);", [
                        user_id, photo_url, caption])
 
 # READ

@@ -53,8 +53,12 @@ https://github.com/tonesfrantz/pet_peer.git
 
 # Tasks:
 
-1. Build most_popular html. Order the photos by most likes.
-2. Build Add-photo page and funcitionality.
+<!-- 1. Build most_popular html. Order the photos by most likes. --> Review after new data has been entered.
 
-3. Build delete user functionality.
-4. Build
+<!-- 2. Build Add-photo page and funcitionality. -->
+
+3. Click on photo to see it larger.
+
+4. Delete user fuctionality.
+
+5. Build

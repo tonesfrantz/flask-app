@@ -5,6 +5,22 @@ from models.photo import insert_photo, get_all_photos, get_photo, delete_photo, 
 photo_controller = Blueprint(
     "photo_controller", __name__, template_folder="../templates/pets")
 
+# create
+
+
+@photo_controller.route('/photo/create')
+def create_page():
+    return render_template("create.html")
+
+
+@photo_controller.route('/photo/create/upload', methods=['POST'])
+def create_photo_upload():
+    user_id = session.get('user_id')
+    photo_url = request.form.get("photo_url")
+    caption = request.form.get("caption")
+    insert_photo(user_id, photo_url, caption)
+    return redirect('/')
+
 # read
 
 

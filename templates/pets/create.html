@@ -1,0 +1,29 @@
+{% extends 'base.html' %} {% block content%}
+<section class="create_pet">
+    <div class="create_this_pet">
+        <h2>Create Pet Post</h2>
+        <form action="/photo/create/upload" method="POST">
+            <div>
+                <label for="photo_url">Photo URL</label>
+                <input
+                    id="photo_url"
+                    name="photo_url"
+                    type="text"
+                    placeholder="Enter Here"
+                />
+            </div>
+            <div>
+                <label for="caption">Caption</label>
+                <input
+                    id="caption"
+                    name="caption"
+                    type="text"
+                    placeholder="Enter Here"
+                />
+            </div>
+
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+</section>
+{% endblock content %}
