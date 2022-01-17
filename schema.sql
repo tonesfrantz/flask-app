@@ -15,7 +15,8 @@ create table photos (
     photo_id SERIAL NOT null primary key,
     user_id INT,
     photo_url TEXT not null,
-    caption VARCHAR(255)
+    caption VARCHAR(255),
+    pet_type TEXT
 );
 
 create table photo_likes (
@@ -32,104 +33,115 @@ VALUES
     (
         1,
         'static/images/arlo1.jpeg',
-        'arlo1'
+        'arlo1',
+        'dog'
     );
 
 INSERT INTO
-    photos (user_id, photo_url, caption)
+    photos (user_id, photo_url, caption, pet_type)
 VALUES
     (
         1,
         'static/images/arlo2.jpeg',
-        'arlo2'
+        'arlo2',
+        'dog'
     );
 
 INSERT INTO
-    photos (user_id, photo_url, caption)
+    photos (user_id, photo_url, caption, pet_type)
 VALUES
     (
         2,
         'static/images/arlo3.JPG',
-        'arlo3'
+        'arlo3',
+        'dog'
     );
 
 INSERT INTO
-    photos (user_id, photo_url, caption)
+    photos (user_id, photo_url, caption, pet_type)
 VALUES
     (
         2,
         'static/images/arlo4.jpeg',
-        'arlo4'
+        'arlo4',
+        'cat'
     );
 
 INSERT INTO
-    photos (user_id, photo_url, caption)
+    photos (user_id, photo_url, caption, pet_type)
 VALUES
     (
         3,
         '/static/images/arlo5.JPG',
-        'arlo5'
+        'arlo5',
+        'fish'
     );
 
 INSERT INTO
-    photos (user_id, photo_url, caption)
+    photos (user_id, photo_url, caption, pet_type)
 VALUES
     (
         3,
         '/static/images/arlo6.JPG',
-        'arlo6'
+        'arlo6',
+        'other'
     );
 
 INSERT INTO
-    photos (user_id, photo_url, caption)
+    photos (user_id, photo_url, caption, pet_type)
 VALUES
     (
         4,
         '/static/images/arlo7.jpeg',
-        'arlo7'
+        'arlo7',
+        'horse'
     );
 
 INSERT INTO
-    photos (user_id, photo_url, caption)
+    photos (user_id, photo_url, caption, pet_type)
 VALUES
     (
         4,
         '/static/images/arlo8.JPG',
-        'arlo8'
+        'arlo8',
+        'horse'
     );
 
 INSERT INTO
-    photos (user_id, photo_url, caption)
+    photos (user_id, photo_url, caption, pet_type)
 VALUES
     (
         5,
         '/static/images/arlo9.JPG',
-        'arlo9'
+        'arlo9',
+        'fish'
     );
 
 INSERT INTO
-    photos (user_id, photo_url, caption)
+    photos (user_id, photo_url, caption, pet_type)
 VALUES
     (
         5,
         '/static/images/arlo10.JPG',
-        'arlo10'
+        'arlo10' 'dog'
     );
 
 INSERT INTO
-    photos (user_id, photo_url, caption)
+    photos (user_id, photo_url, caption, pet_type)
 VALUES
     (
         6,
         '/static/images/arlo11.JPG',
-        'arlo11'
+        'arlo11',
+        'dog'
     );
 
 INSERT INTO
-    photos (user_id, photo_url, caption)
+    photos (user_id, photo_url, caption, pet_type)
 VALUES
     (
         6,
         '/static/images/arlo12.jpeg',
-        'arlo12'
+        'arlo12',
+        'dog'
     );

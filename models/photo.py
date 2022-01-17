@@ -3,9 +3,9 @@ import database
 # INSERT
 
 
-def insert_photo(user_id, photo_url, caption):
-    database.sql_write("INSERT INTO photos (user_id, photo_url, caption) VALUES(%s, %s, %s);", [
-                       user_id, photo_url, caption])
+def insert_photo(user_id, photo_url, caption, pet_type):
+    database.sql_write("INSERT INTO photos (user_id, photo_url, caption) VALUES(%s, %s, %s, %s);", [
+                       user_id, photo_url, caption, pet_type])
 
 # READ
 
@@ -36,9 +36,9 @@ def get_all_Desc_most_popular(user_id):
 # UPDATE
 
 
-def update_photos(photo_id, photo_url, caption):
-    database.sql_write("UPDATE photos SET photo_url= %s, caption = %s WHERE photo_id = %s;", [
-        photo_url, caption, photo_id])
+def update_photos(photo_id, photo_url, caption, pet_type):
+    database.sql_write("UPDATE photos SET photo_url= %s, caption = %s, pet_type=%s WHERE photo_id = %s;", [
+        photo_url, caption, photo_id, pet_type])
 
 # DELETE
 

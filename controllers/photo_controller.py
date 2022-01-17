@@ -18,7 +18,8 @@ def create_photo_upload():
     user_id = session.get('user_id')
     photo_url = request.form.get("photo_url")
     caption = request.form.get("caption")
-    insert_photo(user_id, photo_url, caption)
+    pet_type = request.form.get("pet_type")
+    insert_photo(user_id, photo_url, caption, pet_type)
     return redirect('/')
 
 # read
@@ -33,6 +34,12 @@ def photos():
         return render_template("pets.html", pet_photos=pet_photos)
     else:
         return redirect('/signup_login')
+
+
+@photo_controller.route('/enlarge/<photo_id>')
+def enlarge(photo_id):
+    pet = get_photo(photo_id)
+    return render_template('enlarge.html', pet=pet)
 
 # edit
 
@@ -49,7 +56,8 @@ def edit():
 def update(photo_id):
     photo_url = request.form.get("photo_url")
     caption = request.form.get("caption")
-    update_photos(photo_id, photo_url, caption)
+    pet_type = request.form.get("pet_type")
+    update_photos(photo_id, photo_url, caption, pet_type)
     return redirect('/')
 
 

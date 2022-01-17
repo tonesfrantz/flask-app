@@ -2,13 +2,17 @@
 <section class="all-pets">
     {% for pet in pet_photos %}
     <div class="individual_pet">
+        <a href = "/enlarge/{{pet['photo_id']}}">
         <img src="{{pet['photo_url']}}" alt="{{pet['caption']}}" />
+        </a>
         <div class="caption">{{pet['caption']}}</div>
         <div class="photo_id"></div>
+        {% if session['user_id'] == pet['user_id'] %}
         <form action="/edit_delete" method="POST" id="edit_delete">
             <input type="hidden" name="photo_id" value="{{pet['photo_id']}}" />
             <button type="submit" value="{{pet['user_id']}}">EDIT / DELETE</button>
         </form>
+        {% endif %}
         {% if pet['has_liked'] == 0 %}
         <form action="/like" method="POST" id="like">
             <input type="hidden" name="photo_id" value="{{pet['photo_id']}}" />

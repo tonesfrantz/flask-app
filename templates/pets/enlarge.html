@@ -1,0 +1,16 @@
+{% extends 'base.html' %} {% block content%}
+<section class="enlarge_pet">
+    <div class="enlarge_this_pet">
+        <img
+            class="enlarge_photo"
+            src="{{pet['photo_url']}}"
+            alt="{{pet['caption']}}"
+        />
+
+        <div class="large_caption">{{pet['caption']}}</div>
+    </div>
+    <form action="/">
+        <button type="submit">Done</button>
+    </form>
+</section>
+{% endblock content %}

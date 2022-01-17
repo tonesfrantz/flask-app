@@ -72,6 +72,12 @@ img {
     object-fit: cover;
     border: 0.5em solid white;
 }
+.enlarge_photo {
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+    border: 0.5em solid white;
+}
 
 .individial_pet .info {
     display: flex;

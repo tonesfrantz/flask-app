@@ -57,8 +57,12 @@ https://github.com/tonesfrantz/pet_peer.git
 
 <!-- 2. Build Add-photo page and funcitionality. -->
 
-3. Click on photo to see it larger.
+<!-- 3. Click on photo to see it larger. --> CSS to make it more appealing
 
-4. Delete user fuctionality.
+4. User edit function
+5. User Delete Function.
 
-5. Build
+6. Adjust delete config so only the user that uploaded can delete.
+
+7. What kind of pet is it... put a type column in the photo Table. (drop down table) U[date Data-Table with type column.]
+8. Group pets by type.
