@@ -51,4 +51,10 @@ https://github.com/tonesfrantz/pet_peer.git
 
 # Code to fix:
 
-1. Figure out why the like button doesn't work within the loop unless that session has pressed it.... How come it doesn't recognize the value in there?
+# Tasks:
+
+1. Build most_popular html. Order the photos by most likes.
+2. Build Add-photo page and funcitionality.
+
+3. Build delete user functionality.
+4. Build
