@@ -39,3 +39,7 @@ def update(photo_id):
 
 
 # delete
+@photo_controller.route('/photo/<photo_id>/delete', methods=['POST'])
+def delete(photo_id):
+    delete_photo(photo_id)
+    return redirect('/')
