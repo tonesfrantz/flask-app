@@ -1,5 +1,5 @@
 from flask import Blueprint, request, session, redirect, render_template
-from models.likes import insert_likes
+from models.likes import insert_likes, delete_like
 
 likes_controller = Blueprint(
     "likes_controller", __name__, template_folder="../templates/pets")
@@ -14,6 +14,11 @@ def create():
 
     return redirect('/')
 
-# @likes_controller.route('/count_likes')
-# def read():
-#     photo_id =
+
+@likes_controller.route('/un_like', methods=['POST'])
+def destroy():
+    user_id = session.get('user_id')
+    photo_id = request.form.get('photo_id')
+    delete_like(photo_id, user_id)
+
+    return redirect('/')

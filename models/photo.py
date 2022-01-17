@@ -36,9 +36,9 @@ def get_all_photos(user_id):
 # UPDATE
 
 
-def update_photos(user_id, photo_url, caption):
-    database.sql_write("UPDATE photos SET user_id = %s, photo_url= %s, caption = %s;" [
-                       user_id, photo_url, caption])
+def update_photos(photo_id, photo_url, caption):
+    database.sql_write("UPDATE photos SET photo_url= %s, caption = %s WHERE photo_id = %s;", [
+        photo_url, caption, photo_id])
 
 # DELETE
 

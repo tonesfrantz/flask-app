@@ -1,0 +1,37 @@
+{% extends 'base.html' %} {% block content%}
+<section class="edit_pet">
+    <div class="edit_this_pet">
+        <h2>Edit Pet</h2>
+
+        <img
+            class="edit_photo"
+            src="{{pet['photo_url']}}"
+            alt="{{pet['caption']}}"
+        />
+        <form action="/photo/{{pet['photo_id']}}" method="POST">
+            <div>
+                <label for="caption">Caption</label>
+                <input
+                    id="caption"
+                    name="caption"
+                    type="text"
+                    value="{{pet['caption']}}"
+                />
+            </div>
+            <div>
+                <label for="photo_url">Photo URL</label>
+                <input
+                    id="photo_url"
+                    name="photo_url"
+                    type="text"
+                    value="{{pet['photo_url']}} "
+                />
+            </div>
+            <button type="submit">Save</button>
+        </form>
+    </div>
+    <form action="/photo/{{pet['photo_id']}}/delete" method="POST">
+        <button type="submit">Delete</button>
+    </form>
+</section>
+{% endblock content %}

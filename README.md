@@ -47,6 +47,8 @@ https://github.com/tonesfrantz/pet_peer.git
 
 # Questions so far:
 
-1. Why am I using: DB_URL = os.environ.get("DATABASE_URL", "dbname=flask_app"). The old app used DictCursor... Hhow should I move forward?
-
 # Spare code from the 'base.html' file
+
+# Code to fix:
+
+1. Figure out why the like button doesn't work within the loop unless that session has pressed it.... How come it doesn't recognize the value in there?

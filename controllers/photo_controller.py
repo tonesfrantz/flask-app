@@ -18,10 +18,24 @@ def photos():
         return redirect('/signup_login')
 
 
+@photo_controller.route('/edit_delete', methods=['POST'])
+def edit():
+    photo_id = request.form.get("photo_id")
+    pet = get_photo(photo_id)
+    return render_template("edit_delete.html", pet=pet)
 # create
 
 # insert
 
 # update
+
+
+@photo_controller.route('/photo/<photo_id>', methods=['POST'])
+def update(photo_id):
+    photo_url = request.form.get("photo_url")
+    caption = request.form.get("caption")
+    update_photos(photo_id, photo_url, caption)
+    return redirect('/')
+
 
 # delete
