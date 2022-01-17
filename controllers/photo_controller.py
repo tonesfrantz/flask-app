@@ -1,10 +1,11 @@
 from flask import Blueprint, request, session, redirect, render_template
-from models.likes import get_all_likes
 from models.photo import insert_photo, get_all_photos, get_photo, delete_photo, update_photos
 
 
 photo_controller = Blueprint(
     "photo_controller", __name__, template_folder="../templates/pets")
+
+# read
 
 
 @photo_controller.route('/home')
@@ -17,19 +18,17 @@ def photos():
     else:
         return redirect('/signup_login')
 
+# edit
+
 
 @photo_controller.route('/edit_delete', methods=['POST'])
 def edit():
     photo_id = request.form.get("photo_id")
     pet = get_photo(photo_id)
     return render_template("edit_delete.html", pet=pet)
-# create
 
-# insert
 
 # update
-
-
 @photo_controller.route('/photo/<photo_id>', methods=['POST'])
 def update(photo_id):
     photo_url = request.form.get("photo_url")

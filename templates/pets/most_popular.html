@@ -1,0 +1,32 @@
+{% extends 'base.html' %} {% block content %}
+<section class="most_popular">
+    {% for pet in pet_photos %}
+    <div class="individual_pet">
+        <img src="{{pet['photo_url']}}" alt="{{pet['caption']}}" />
+        <div class="caption">{{pet['caption']}}</div>
+        <div class="photo_id"></div>
+        <form action="/edit_delete" method="POST" id="edit_delete">
+            <input type="hidden" name="photo_id" value="{{pet['photo_id']}}" />
+            <button type="submit" value="{{pet['user_id']}}">EDIT / DELETE</button>
+        </form>
+        {% if pet['has_liked'] == 0 %}
+        <form action="/like" method="POST" id="like">
+            <input type="hidden" name="photo_id" value="{{pet['photo_id']}}" />
+            <button type="submit" value="{{pet['user_id']}}">LIKE</button>
+            <div class="likes">{{pet['like_count']}} {% if pet['like_count'] != 0 %} &#128076</div>
+            {% endif %}
+        </form>
+        {% else %}
+        <form action="/un_like" method="POST" id="like">
+            <input type="hidden" name="photo_id" value="{{pet['photo_id']}}" />
+            <button type="submit" value="{{pet['user_id']}}">UNLIKE</button>
+            
+            <div class="likes">{{pet['like_count']}} {% if pet['like_count'] != 0 %} &#128076</div>
+            {% endif %}
+        </form>
+        {% endif %}
+    </div>
+    {% endfor %}
+</section>
+
+{% endblock content%}
