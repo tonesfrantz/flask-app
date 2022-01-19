@@ -33,13 +33,31 @@ def user_list():
     return render_template("user_list.html", users=users)
 
 
-@user_controller.route("/user/<id>/edit", methods=["POST"])
-def user_edit(id):
-    user = get_user_by_id(id)
+@user_controller.route("/user/<user_id>/edit", methods=["POST"])
+def user_update(user_id):
+    user = get_user_by_id(user_id)
     return render_template("user_edit.html", user=user)
 
 
-@user_controller.route("/user/<id>/delete", methods=["POST"])
-def delete(id):
-    delete_user(id)
-    return redirect("/user_list")
+@user_controller.route("/user/<user_id>/update", methods=['POST'])
+def update_this_user(user_id):
+    if int(session.get('user_id')) == int(user_id):
+        name = request.form.get("name")
+        email = request.form.get("email")
+        password = request.form.get("password")
+        password2 = request.form.get("password2")
+        if password == password2:
+            user = update_user(user_id, name, email, password)
+            session['user_name'] = user['name']
+            return redirect('/user_list')
+        else:
+            return redirect("/user/<user_id>/update?error=Passwords+do+not+match")
+    else:
+        return redirect("/user/<user_id>/update?error=Permission+denied")
+
+
+@user_controller.route("/user/<user_id>/delete", methods=["POST"])
+def delete(user_id):
+    delete_user(user_id)
+    session.clear()
+    return redirect("/")

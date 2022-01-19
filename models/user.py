@@ -32,12 +32,14 @@ def get_all_users():
     return results
 
 
-def update_user(name, email, password):
+def update_user(user_id, name, email, password):
     password = bcrypt.hashpw(
         password.encode(), bcrypt.gensalt()).decode()
-    database.sql_write("UPDATE users SET name = %s, email = %s, password = %s;", [
-                       name, email, password])
+    results = database.sql_read_write("UPDATE users SET name = %s, email = %s, password = %s WHERE user_id = %s RETURNING *;", [
+        name, email, password, user_id])
+    return results[0]
 
 
 def delete_user(user_id):
-    database.sql_write("DELETE FROM users WHERE user_id = %s;", [user_id])
+    database.sql_write(
+        "DELETE FROM users WHERE user_id = %s;", [user_id])

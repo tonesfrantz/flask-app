@@ -79,13 +79,13 @@ img {
     border: 0.5em solid white;
 }
 
-.individial_pet .info {
+.individial_pet .info .user_individual {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.all-pets {
+.all-pets .user_list {
     display: grid;
     gap: 2em;
     grid-template-columns: repeat(2, 1fr);
