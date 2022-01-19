@@ -1,19 +1,34 @@
 {% extends 'base.html' %} {% block content %}
 <section class="type_pet">
-    {% for type in types %}
+    <div>
+        <form action="/sort_type" method= "POST">
+            <label for="pet_type">What type of pet?</label>
+            <select name="pet_type" id="pet_type">
+                <option value="None">All</option>
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <option value="horse">Horse</option>
+                <option value="fish">Fish</option>
+                <option value="other">Other</option>
+            </select>
+            <button type="submit">OK</button>
+        </form>
+    </div>
+    {% for pet in pet_photos %}
     <div class="individual_type">
-        <img src="{{type['photo_url']}}" alt="{{type['caption']}}" />
-        <div class="caption">{{type['caption']}}</div>
+        {% if pet['type'] == pet_type %}
+        <img src="{{pet['photo_url']}}" alt="{{pet['caption']}}" />
+        <div class="caption">{{pet['caption']}}</div>
         <div class="photo_id"></div>
         <form action="/edit_delete" method="POST" id="edit_delete">
-            <input type="hidden" name="photo_id" value="{{type['photo_id']}}" />
-            <button type="submit" value="{{type['user_id']}}">EDIT / DELETE</button>
+            <input type="hidden" name="photo_id" value="{{pet['photo_id']}}" />
+            <button type="submit" value="{{pet['user_id']}}">EDIT / DELETE</button>
         </form>
         {% if type['has_liked'] == 0 %}
         <form action="/like" method="POST" id="like">
-            <input type="hidden" name="photo_id" value="{{type['photo_id']}}" />
-            <button type="submit" value="{{type['user_id']}}">LIKE</button>
-            <div class="likes">{{type['like_count']}} {% if type['like_count'] != 0 %} &#128076</div>
+            <input type="hidden" name="photo_id" value="{{pet['photo_id']}}" />
+            <button type="submit" value="{{pet['user_id']}}">LIKE</button>
+            <div class="likes">{{pet['like_count']}} {% if pet['like_count'] != 0 %} &#128076</div>
             {% endif %}
         </form>
         {% else %}
@@ -21,12 +36,14 @@
             <input type="hidden" name="photo_id" value="{{pet['photo_id']}}" />
             <button type="submit" value="{{pet['user_id']}}">UNLIKE</button>
             
-            <div class="likes">{{type['like_count']}} {% if type['like_count'] != 0 %} &#128076</div>
+            <div class="likes">{{pet['like_count']}} {% if pet['like_count'] != 0 %} &#128076</div>
             {% endif %}
         </form>
         {% endif %}
+        {% endif %}
+        {% endfor %}
     </div>
-    {% endfor %}
+    
 </section>
-
-{% endblock content%}
+    {% endblock content%}
+</section>

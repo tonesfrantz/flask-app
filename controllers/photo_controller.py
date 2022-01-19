@@ -41,6 +41,20 @@ def enlarge(photo_id):
     pet = get_photo(photo_id)
     return render_template('enlarge.html', pet=pet)
 
+
+@photo_controller.route('/sort_type', methods=['GET', 'POST'])
+def sort_by_tyoe():
+    if "user_id" in session and session["user_id"] != None:
+        user_id = session.get("user_id")
+        pet_type = request.form.get("pet_type")
+        if pet_type == None:
+            return render_template("type.html")
+        elif pet_type != None:
+            pet_photos = get_all_photos(user_id)
+            return render_template("type.html", pet_photos=pet_photos, pet_type=pet_type)
+    else:
+        return redirect('/signup_login')
+
 # edit
 
 

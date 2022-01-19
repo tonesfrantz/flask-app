@@ -59,15 +59,16 @@ https://github.com/tonesfrantz/pet_peer.git
 
 <!-- 3. Click on photo to see it larger. --> CSS to make it more appealing
 
-4. User edit function
+<!-- 4. User edit function
    make the user list not an edit place.
    once clicked on the user you can edit or delete.
 
     >
 
-5. User Delete Function.
+5. User Delete Function. -->
 
 <!-- 6. Adjust delete config so only the user that uploaded can delete. -->
 
-7. What kind of pet is it... put a type column in the photo Table. (drop down table) U[date Data-Table with type column.]
 8. Group pets by type.
+    - make drop down menu in the page which then loads based on that.
+    - propogate the page accoringly.
