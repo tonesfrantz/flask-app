@@ -12,10 +12,10 @@ likes_controller = Blueprint(
 def create():
     user_id = session.get('user_id')
     photo_id = request.form.get('photo_id')
-
+    redirect_path = request.form.get('redirect_path', "/")
     insert_likes(photo_id, user_id)
 
-    return redirect('/')
+    return redirect(redirect_path)
 
 # delete
 
@@ -24,9 +24,10 @@ def create():
 def destroy():
     user_id = session.get('user_id')
     photo_id = request.form.get('photo_id')
+    redirect_path = request.form.get('redirect_path', "/")
     delete_like(photo_id, user_id)
 
-    return redirect('/')
+    return redirect(redirect_path)
 
 # read-most popular
 
@@ -35,4 +36,4 @@ def destroy():
 def photos():
     user_id = session.get("user_id")
     pet_photos = get_all_Desc_most_popular(user_id)
-    return render_template("pets.html", pet_photos=pet_photos)
+    return render_template("most_popular.html", pet_photos=pet_photos)

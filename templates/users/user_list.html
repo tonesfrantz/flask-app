@@ -1,21 +1,21 @@
 {% extends 'base.html' %} {% block content%}
 <section class="user_list">
+    <h2>Edit User</h2>
+    {% for user in users %}
     <div class="user_individual">
-        <h2>Edit User</h2>
-        {% for user in users %}
-        <div>
-            <label for="name">Name</label>
+        <div class="info">
+            <label for="name">Name:</label>
             <a>{{ user['name'] }}</a>
         </div>
-        <div>
-            <label for="email">Email</label>
+        <div class="info">
+            <label for="email">Email:</label>
             <a>{{ user['email'] }}</a>
         </div>
         {% if session['user_id'] == user['user_id'] %}
         <form action="/user/{{ user['user_id'] }}/edit" method="POST">
             <button class="edit_user" type="submit">Edit/Delete</button>
         </form>
-        {% endif %} {% endfor %}
+        {% endif %}{% endfor %}
     </div>
 </section>
 {% endblock content %}

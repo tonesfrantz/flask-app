@@ -69,6 +69,14 @@ https://github.com/tonesfrantz/pet_peer.git
 
 <!-- 6. Adjust delete config so only the user that uploaded can delete. -->
 
-8. Group pets by type.
+<!-- 7. Group pets by type.
     - make drop down menu in the page which then loads based on that.
-    - propogate the page accoringly.
+    - propogate the page accoringly. -->
+
+<!-- 8. Sign up to S3 database. -->
+
+9. Make the page functional on Heroku using the database from Amazon
+
+10. Add the ability to delete from the Database. - This is proving difficult
+
+11. Adjust CSS to make page look beautiful.

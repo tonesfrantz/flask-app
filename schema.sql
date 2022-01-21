@@ -32,7 +32,7 @@ INSERT INTO
 VALUES
     (
         1,
-        'static/images/arlo1.jpeg',
+        'https://pet-peer-photos.s3.ap-southeast-2.amazonaws.com/images/arlo1.jpeg',
         'arlo1',
         'dog'
     );
@@ -42,7 +42,7 @@ INSERT INTO
 VALUES
     (
         1,
-        'static/images/arlo2.jpeg',
+        'https://pet-peer-photos.s3.ap-southeast-2.amazonaws.com/images/arlo2.jpeg',
         'arlo2',
         'dog'
     );
@@ -52,7 +52,7 @@ INSERT INTO
 VALUES
     (
         2,
-        'static/images/arlo3.JPG',
+        'https://pet-peer-photos.s3.ap-southeast-2.amazonaws.com/images/arlo3.JPG',
         'arlo3',
         'dog'
     );
@@ -62,7 +62,7 @@ INSERT INTO
 VALUES
     (
         2,
-        'static/images/arlo4.jpeg',
+        'https://pet-peer-photos.s3.ap-southeast-2.amazonaws.com/images/arlo4.jpeg',
         'arlo4',
         'cat'
     );
@@ -72,7 +72,7 @@ INSERT INTO
 VALUES
     (
         3,
-        '/static/images/arlo5.JPG',
+        'https://pet-peer-photos.s3.ap-southeast-2.amazonaws.com/images/arlo5.JPG',
         'arlo5',
         'fish'
     );
@@ -82,7 +82,7 @@ INSERT INTO
 VALUES
     (
         3,
-        '/static/images/arlo6.JPG',
+        'https://pet-peer-photos.s3.ap-southeast-2.amazonaws.com/images/arlo6.JPG',
         'arlo6',
         'other'
     );
@@ -92,7 +92,7 @@ INSERT INTO
 VALUES
     (
         4,
-        '/static/images/arlo7.jpeg',
+        'https://pet-peer-photos.s3.ap-southeast-2.amazonaws.com/images/arlo7.jpeg',
         'arlo7',
         'horse'
     );
@@ -102,7 +102,7 @@ INSERT INTO
 VALUES
     (
         4,
-        '/static/images/arlo8.JPG',
+        'https://pet-peer-photos.s3.ap-southeast-2.amazonaws.com/images/arlo8.JPG',
         'arlo8',
         'horse'
     );
@@ -112,7 +112,7 @@ INSERT INTO
 VALUES
     (
         5,
-        '/static/images/arlo9.JPG',
+        'https://pet-peer-photos.s3.ap-southeast-2.amazonaws.com/images/arlo9.JPG',
         'arlo9',
         'fish'
     );
@@ -122,8 +122,9 @@ INSERT INTO
 VALUES
     (
         5,
-        '/static/images/arlo10.JPG',
-        'arlo10' 'dog'
+        'https://pet-peer-photos.s3.ap-southeast-2.amazonaws.com/images/arlo10.JPG',
+        'arlo10',
+        'dog'
     );
 
 INSERT INTO
@@ -131,7 +132,7 @@ INSERT INTO
 VALUES
     (
         6,
-        '/static/images/arlo11.JPG',
+        'https://pet-peer-photos.s3.ap-southeast-2.amazonaws.com/images/arlo11.JPG',
         'arlo11',
         'dog'
     );
@@ -141,7 +142,7 @@ INSERT INTO
 VALUES
     (
         6,
-        '/static/images/arlo12.jpeg',
-        'arlo12',
+        'https://pet-peer-photos.s3.ap-southeast-2.amazonaws.com/images/arlo12.jpeg',
+        'Big Stick... I love a big stick!',
         'dog'
     );

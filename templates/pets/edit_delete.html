@@ -8,7 +8,11 @@
             src="{{pet['photo_url']}}"
             alt="{{pet['caption']}}"
         />
-        <form action="/photo/{{pet['photo_id']}}" method="POST">
+        <form
+            action="/photo/{{pet['photo_id']}}"
+            enctype="multipart/form-data"
+            method="POST"
+        >
             <div>
                 <label for="caption">Caption</label>
                 <input
@@ -19,13 +23,8 @@
                 />
             </div>
             <div>
-                <label for="photo_url">Photo URL</label>
-                <input
-                    id="photo_url"
-                    name="photo_url"
-                    type="text"
-                    value="{{pet['photo_url']}} "
-                />
+                <label for="photo">Photo</label>
+                <input id="photo" name="photo" type="file" accept="image/*" />
             </div>
             <button type="submit">Save</button>
         </form>

@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 <section class="type_pet">
     <div>
-        <form action="/sort_type" method= "POST">
+        <form action="/sort_type/post" method= "POST">
             <label for="pet_type">What type of pet?</label>
             <select name="pet_type" id="pet_type">
                 <option value="None">All</option>
@@ -16,7 +16,6 @@
     </div>
     {% for pet in pet_photos %}
     <div class="individual_type">
-        {% if pet['type'] == pet_type %}
         <img src="{{pet['photo_url']}}" alt="{{pet['caption']}}" />
         <div class="caption">{{pet['caption']}}</div>
         <div class="photo_id"></div>
@@ -24,7 +23,7 @@
             <input type="hidden" name="photo_id" value="{{pet['photo_id']}}" />
             <button type="submit" value="{{pet['user_id']}}">EDIT / DELETE</button>
         </form>
-        {% if type['has_liked'] == 0 %}
+        {% if pet['has_liked'] == 0 %}
         <form action="/like" method="POST" id="like">
             <input type="hidden" name="photo_id" value="{{pet['photo_id']}}" />
             <button type="submit" value="{{pet['user_id']}}">LIKE</button>
@@ -39,11 +38,9 @@
             <div class="likes">{{pet['like_count']}} {% if pet['like_count'] != 0 %} &#128076</div>
             {% endif %}
         </form>
-        {% endif %}
-        {% endif %}
-        {% endfor %}
+        {% endif %}   
     </div>
-    
+    {% endfor %}
 </section>
     {% endblock content%}
 </section>

@@ -13,6 +13,10 @@ footer {
     width: 60em;
     margin: 2em auto;
 }
+h2 {
+    text-align: center;
+    margin-bottom: 1.5em;
+}
 
 a,
 button {
@@ -103,4 +107,30 @@ footer {
 #name #email #password {
     position: relative;
     left: 2em;
+}
+
+.user_individual {
+    background-color: rgb(244, 244, 244);
+    padding: 2em;
+    margin-bottom: 1em;
+}
+
+.user_individual img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: 0.5em solid white;
+}
+
+.user_individual .info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-list {
+    display: grid;
+    gap: 2em;
+    padding: 2em;
+    grid-template-columns: repeat(2, 1fr);
 }

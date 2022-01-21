@@ -2,7 +2,9 @@
 <section class="most_popular">
     {% for pet in pet_photos %}
     <div class="individual_pet">
+        <a href = "/enlarge/{{pet['photo_id']}}">
         <img src="{{pet['photo_url']}}" alt="{{pet['caption']}}" />
+        </a>
         <div class="caption">{{pet['caption']}}</div>
         <div class="photo_id"></div>
         <form action="/edit_delete" method="POST" id="edit_delete">
@@ -12,6 +14,7 @@
         {% if pet['has_liked'] == 0 %}
         <form action="/like" method="POST" id="like">
             <input type="hidden" name="photo_id" value="{{pet['photo_id']}}" />
+            <input type="hidden" name="redirect_path" value="/most_popular" />
             <button type="submit" value="{{pet['user_id']}}">LIKE</button>
             <div class="likes">{{pet['like_count']}} {% if pet['like_count'] != 0 %} &#128076</div>
             {% endif %}
@@ -19,6 +22,7 @@
         {% else %}
         <form action="/un_like" method="POST" id="like">
             <input type="hidden" name="photo_id" value="{{pet['photo_id']}}" />
+            <input type="hidden" name="redirect_path" value="/most_popular" />
             <button type="submit" value="{{pet['user_id']}}">UNLIKE</button>
             
             <div class="likes">{{pet['like_count']}} {% if pet['like_count'] != 0 %} &#128076</div>
