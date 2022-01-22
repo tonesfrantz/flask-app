@@ -4,6 +4,10 @@
 
 https://powerful-everglades-60027.herokuapp.com
 
+<!-- Heroku App Link -->
+
+https://powerful-everglades-60027.herokuapp.com/signup_login
+
 <!-- Github -->
 
 https://github.com/tonesfrantz/pet_peer.git
@@ -45,11 +49,12 @@ https://github.com/tonesfrantz/pet_peer.git
     <!-- INSERT INTO photo_likes (user_id, photo_id) VALUES (1, 1); -->
     <!-- DELETE FROM photo_likes WHERE user_id = 1 AND photo_id = 1; -->
 
-# Questions so far:
+# Challenges:
 
-# Spare code from the 'base.html' file
-
-# Code to fix:
+-   Setting up Amazon S3 to link with the App.
+-   CSS
+-   Picture size was not reliable as they were not cropped before uploading, this causes size issues.
+-   Making the app more interesing and creative was challenging.
 
 # Tasks:
 
@@ -75,8 +80,10 @@ https://github.com/tonesfrantz/pet_peer.git
 
 <!-- 8. Sign up to S3 database. -->
 
-9. Make the page functional on Heroku using the database from Amazon
+<!-- 9. Make the page functional on Heroku using the database from Amazon -->
 
-10. Add the ability to delete from the Database. - This is proving difficult
+<!-- 10. Add the ability to delete from the Database. - This is proving difficult -->
 
-11. Adjust CSS to make page look beautiful.
+<!-- 11. Adjust CSS to make page look beautiful. -->
+
+<!-- 12. Update photos and captions for presentation -->

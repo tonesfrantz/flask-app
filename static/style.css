@@ -6,7 +6,11 @@ main {
     margin: 1em;
     flex-direction: column;
     flex-wrap: wrap;
-    background-image: linear-gradient(rgb(253, 212, 212), rgb(253, 253, 199));
+    background-color: wheat;
+}
+
+.signup_login {
+    background-color: transparent;
 }
 
 .gallery_container {
@@ -23,6 +27,7 @@ div.gallery {
     border: 1px solid #ccc;
     border-radius: 8px;
     opacity: 0.95;
+    background-color: transparent;
 }
 
 div.gallery:hover {
@@ -46,46 +51,11 @@ div.desc {
 
 .responsive {
     display: flex;
-    /* flex-direction: column; */
     gap: 5px;
     flex-wrap: wrap;
     max-width: 1100px;
-    /* width: 100%; */
     justify-content: center;
-    /* padding: 0 6px;
-    float: center; */
 }
-
-/* @media only screen and (max-width: 1000px) {
-    .responsive {
-        width: 74%;
-        margin: 6px 0;
-    }
-}
-
-@media only screen and (max-width: 700px) {
-    .responsive {
-        width: 55%;
-        margin: 6px 0;
-    }
-}
-
-@media only screen and (max-width: 500px) {
-    .responsive {
-        width: 49.99999%;
-    }
-}
-@media only screen and (max-width: 300px) {
-    .responsive {
-        width: 49.99999%;
-    }
-} */
-
-/* .clearfix:after {
-    content: '';
-    display: table;
-    clear: both;
-} */
 
 * {
     box-sizing: border-box;
@@ -146,30 +116,6 @@ form label {
     font-weight: bold;
 }
 
-/* .individial_pet {
-    background-color: rgb(244, 244, 244);
-    padding: 2em;
-}
-
-div.individial_pet {
-    width: 100%;
-    height: 20px;
-    object-fit: cover;
-    border: 1px solid #ccc;
-}
-
-div.individial_pet:hover {
-    width: 100%;
-    height: 20px;
-    object-fit: cover;
-    border: 1px solid #777;
-}
-img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border: 0.5em solid white;
-}*/
 .enlarge_photo {
     width: 100%;
     height: 600px;
@@ -177,19 +123,6 @@ img {
     border: 0.5em solid white;
     border-radius: 5px;
 }
-
-/* .individial_pet .info .user_individual {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 10px;
-}
-
-.all-pets .user_list {
-    display: grid;
-    gap: 2em;
-    grid-template-columns: repeat(3, 1fr);
-}*/
 
 .header_nav {
     display: flex;
