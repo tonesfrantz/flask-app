@@ -1,7 +1,88 @@
 html,
-body {
+body,
+main {
     font-size: 16px;
+    display: flex;
+    margin: 1em;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
+
+.gallery_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+div.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    display: flex;
+    /* flex-direction: column; */
+    gap: 5px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    /* width: 100%; */
+    justify-content: center;
+    /* padding: 0 6px;
+    float: center; */
+}
+
+/* @media only screen and (max-width: 1000px) {
+    .responsive {
+        width: 74%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 55%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 49.99999%;
+    }
+}
+@media only screen and (max-width: 300px) {
+    .responsive {
+        width: 49.99999%;
+    }
+} */
+
+/* .clearfix:after {
+    content: '';
+    display: table;
+    clear: both;
+} */
 
 * {
     box-sizing: border-box;
@@ -10,17 +91,20 @@ body {
 main,
 header,
 footer {
-    width: 60em;
+    width: 100%;
     margin: 2em auto;
 }
 h2 {
     text-align: center;
     margin-bottom: 1.5em;
 }
+h1 {
+    text-align: center;
+}
 
 a,
 button {
-    border: 0;
+    border: 1;
     margin-block: 0.5em;
     display: block;
 }
@@ -28,8 +112,6 @@ button {
 button {
     padding: 0.25em 0.5em;
     cursor: pointer;
-    background-color: rgb(186, 233, 158);
-    font-size: 1.2em;
 }
 
 input,
@@ -59,32 +141,41 @@ form label {
     font-weight: bold;
 }
 
-.individial_pet {
+/* .individial_pet {
     background-color: rgb(244, 244, 244);
     padding: 2em;
 }
 
-.individial_pet {
+div.individial_pet {
     width: 100%;
     height: 20px;
     object-fit: cover;
-    border: 0.5em solid white;
+    border: 1px solid #ccc;
+}
+
+div.individial_pet:hover {
+    width: 100%;
+    height: 20px;
+    object-fit: cover;
+    border: 1px solid #777;
 }
 img {
     width: 100%;
-    height: 250px;
+    height: 200px;
     object-fit: cover;
     border: 0.5em solid white;
-}
+}*/
 .enlarge_photo {
     width: 100%;
-    height: 400px;
+    height: 600px;
     object-fit: contain;
     border: 0.5em solid white;
+    border-radius: 5px;
 }
 
-.individial_pet .info .user_individual {
+/* .individial_pet .info .user_individual {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 10px;
 }
@@ -93,16 +184,12 @@ img {
     display: grid;
     gap: 2em;
     grid-template-columns: repeat(3, 1fr);
-}
+}*/
 
 .header_nav {
     display: flex;
     gap: 20px;
     justify-content: center;
-}
-
-.caption {
-    text-align: center;
 }
 
 footer {

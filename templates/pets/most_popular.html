@@ -1,11 +1,12 @@
 {% extends 'base.html' %} {% block content %}
-<section class="most_popular">
+<section class="gallery_container">
+    <div class="responsive">
     {% for pet in pet_photos %}
-    <div class="individual_pet">
+    <div class="gallery">
         <a href = "/enlarge/{{pet['photo_id']}}">
-        <img src="{{pet['photo_url']}}" alt="{{pet['caption']}}" />
+        <img src="{{pet['photo_url']}}" alt="{{pet['caption']}}" width="600" height="400" />
         </a>
-        <div class="caption">{{pet['caption']}}</div>
+        <div class="desc">{{pet['caption']}}</div>
         <div class="photo_id"></div>
         <form action="/edit_delete" method="POST" id="edit_delete">
             <input type="hidden" name="photo_id" value="{{pet['photo_id']}}" />
@@ -16,8 +17,8 @@
             <input type="hidden" name="photo_id" value="{{pet['photo_id']}}" />
             <input type="hidden" name="redirect_path" value="/most_popular" />
             <button type="submit" value="{{pet['user_id']}}">LIKE</button>
-            <div class="likes">{{pet['like_count']}} {% if pet['like_count'] != 0 %} &#128076</div>
-            {% endif %}
+            <div class="likes"> {% if pet['like_count'] != 0 %} {{pet['like_count']}} {% if pet['like_count'] == 1 %}Like: {% else %} Likes: {% endif %} &#128076 {% else %}No Likes &#128530;{% endif %}</div>
+            
         </form>
         {% else %}
         <form action="/un_like" method="POST" id="like">
@@ -25,12 +26,13 @@
             <input type="hidden" name="redirect_path" value="/most_popular" />
             <button type="submit" value="{{pet['user_id']}}">UNLIKE</button>
             
-            <div class="likes">{{pet['like_count']}} {% if pet['like_count'] != 0 %} &#128076</div>
+            <div class="likes">{{pet['like_count']}} {% if pet['like_count'] == 1 %}Like: {% else %} Likes: {% endif %}{% if pet['like_count'] != 0 %} &#128076</div>
             {% endif %}
         </form>
         {% endif %}
     </div>
     {% endfor %}
+    </div>
 </section>
 
 {% endblock content%}
