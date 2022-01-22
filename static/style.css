@@ -6,6 +6,7 @@ main {
     margin: 1em;
     flex-direction: column;
     flex-wrap: wrap;
+    background-image: linear-gradient(rgb(253, 212, 212), rgb(253, 253, 199));
 }
 
 .gallery_container {
@@ -20,11 +21,13 @@ div.gallery {
     flex-wrap: wrap;
     width: 250px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 8px;
+    opacity: 0.95;
 }
 
 div.gallery:hover {
     border: 1px solid #777;
+    opacity: 1;
 }
 
 div.gallery img {
@@ -97,9 +100,11 @@ footer {
 h2 {
     text-align: center;
     margin-bottom: 1.5em;
+    font-family: 'Mochiy Pop P One', sans-serif;
 }
 h1 {
     text-align: center;
+    font-family: 'Mochiy Pop P One', sans-serif;
 }
 
 a,
@@ -204,7 +209,7 @@ footer {
 }
 
 .user_individual {
-    background-color: rgb(244, 244, 244);
+    background-color: transparent;
     padding: 2em;
     margin-bottom: 1em;
 }
