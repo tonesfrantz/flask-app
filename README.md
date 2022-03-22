@@ -24,8 +24,8 @@ https://github.com/tonesfrantz/pet_peer.git
 # Planning:
 
 -   See planing folder:
-    <img src = "/Users/anthonyfrantz/sei/project2/flask-app/planning/planning_diagrams-Page-1.jpg" width = "250">
-    <img src = "/Users/anthonyfrantz/sei/project2/flask-app/planning/planning_diagrams-Page-2.jpg" width = "250" >
+    <img src = "./Users/anthonyfrantz/sei/project2/flask-app/planning/planning_diagrams-Page-1.jpg" width = "250">
+    <img src = "./Users/anthonyfrantz/sei/project2/flask-app/planning/planning_diagrams-Page-2.jpg" width = "250" >
     planning_diagrams-Page-1.jpg
     planning_diagrams-Page-2.jpg
 
