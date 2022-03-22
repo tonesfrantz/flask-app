@@ -1,6 +1,6 @@
 # Pet - Peer.
 
-sei-anz-seifxr06 - Project 2 - Live Version
+sei-anz-seifxr06 - Project 2 - [Live Version]
 
 # flask-app
 
