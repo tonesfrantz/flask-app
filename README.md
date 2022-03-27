@@ -21,12 +21,12 @@ Sign-up on the login page. Navigate the site and upload images. Enjoy the Pet jo
 
 # Planning:
 
--   See planing folder:
-    <img src = "/Users/anthonyfrantz/sei/project2/flask_project_update/pet_peer/planning/Pet_Peer_Planning.png" width = "250">
-    <img src = "/Users/anthonyfrantz/sei/project2/flask_project_update/pet_peer/planning/Pet_Peer_Planning.png" width = "250" >
+<img src = "./planning/Pet_Peer_Planning.png" width = "250">
+<img src = "./planning/Pet_Peer_Planning.png" width = "250" >
     planning_diagrams-Page-1.jpg
     planning_diagrams-Page-2.jpg
 
+-   See planing folder:
 -   Order of execution:
 
 1. Create DB's from a setup.sql file.
