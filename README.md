@@ -21,10 +21,9 @@ Sign-up on the login page. Navigate the site and upload images. Enjoy the Pet jo
 
 # Planning:
 
-<img src = "./planning/Pet_Peer_Planning.png" width = "250">
-<img src = "./planning/Pet_Peer_Planning.png" width = "250" >
-    planning_diagrams-Page-1.jpg
-    planning_diagrams-Page-2.jpg
+<img src = "./planning/Pet_Peer_Planning.png" width = "250"> <img src = "./planning/Pet_Peer_Planning.png" width = "250" >
+planning_diagrams-Page-1.jpg
+planning_diagrams-Page-2.jpg
 
 -   See planing folder:
 -   Order of execution:
